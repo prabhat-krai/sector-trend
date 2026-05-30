@@ -1,5 +1,7 @@
 # SectorTrend: Market Trend Intelligence & Sector Analyzer
 
+> **Note**: This project was completely generated with Antigravity and Gemini 3.5-Flash.
+
 SectorTrend is a modern web application that analyzes market capitalisation trends for publicly traded companies within any arbitrary industry sector and region. By combining search scraping, generative AI classification, live financial quote retrieval, and headless screenshot rendering, SectorTrend offers a real-time dashboard of sector leaders and their historical trajectories.
 
 ---
