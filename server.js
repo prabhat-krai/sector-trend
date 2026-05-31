@@ -43,7 +43,15 @@ async function searchDuckDuckGoPuppeteer(query) {
   try {
     browser = await puppeteer.launch({
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--no-first-run',
+        '--no-zygote',
+        '--single-process'
+      ]
     });
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
@@ -285,7 +293,16 @@ async function captureGoogleStockScreenshot(ticker, range = '3mo') {
   try {
     browser = await puppeteer.launch({
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox', '--window-size=1200,900']
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--window-size=1200,900',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--no-first-run',
+        '--no-zygote',
+        '--single-process'
+      ]
     });
     const page = await browser.newPage();
     await page.setViewport({ width: 1200, height: 900 });

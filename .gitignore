@@ -28,3 +28,7 @@ dist-ssr
 .env.local
 .env.*.local
 
+# Server process files & logs
+.server.pid
+backend.log
+frontend.log
